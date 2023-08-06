@@ -62,17 +62,17 @@ const Dashboard = () => {
           rows={filteredOrders}
           selectedCurrency={currency}
           onSelectOrder={(orderId) => {
-            const selectedOrder = filteredOrders.find(
-              (order) => order["&id"] === orderId
-            );
-            setSelectedOrderDetails(selectedOrder || {});
-            setSelectedOrderTimeStamps(
-              selectedOrder
-                ? timestampData.results.find(
-                    (ts) => ts["&id"] === selectedOrder["&id"]
-                  ).timestamps
-                : {}
-            );
+
+            console.log('orderId', orderId)
+            const obj = {
+              orderRecieved: orderId.submittedDate,
+              orderStatusUpdated: orderId.submittedDate,
+              orderSubmitted: orderId.submittedDate,
+            }
+            console.log('obj', obj)
+            setSelectedOrderDetails(orderId.executionDetails || {});
+            setSelectedOrderTimeStamps(obj || {});
+           
           }}
         />
       </div>
