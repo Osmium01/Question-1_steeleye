@@ -1,0 +1,40 @@
+/* Card.module.css */
+
+.container {
+  background-color: #043463;
+  border-radius: 1em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* display: inline-block; */
+  padding: 1em;
+  
+  width: 500px; /* You can adjust the width as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 0.5em;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  flex: 1;
+  text-align: right;
+}
